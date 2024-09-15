@@ -4,7 +4,7 @@ import { useFormState } from "react-dom";
 import { create } from "./api/submit";
 
 const initialState = {
-  license: "",
+  cdKey: "",
 };
 
 export default function Home() {
@@ -16,18 +16,18 @@ export default function Home() {
         <form action={formAction} className="space-y-6">
           <div>
             <label
-              htmlFor="email"
+              htmlFor="username"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
-              Email address
+              账户1
             </label>
             <div className="mt-2">
               <input
-                id="email"
-                name="email"
-                type="email"
+                id="username"
+                name="username"
+                type="text"
                 required
-                autoComplete="email"
+                autoComplete="username"
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -38,11 +38,11 @@ export default function Home() {
               type="submit"
               className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              获取license
+              获取1天 cdKey
             </button>
           </div>
         </form>
-        <div>{state.license}</div>
+        <div>{state.cdKey}</div>
       </main>
     </div>
   );
